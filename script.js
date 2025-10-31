@@ -20,7 +20,7 @@ function getHumanChoice() {
 }
 
 function playRound(humanChoice, computerChoice) {
-  console.log(`human's choice: ${humanChoice}. Computer's choice: ${computerChoice}`);
+  console.log(`Your choice: ${humanChoice}. Computer's choice: ${computerChoice}`);
 
   if (humanChoice === computerChoice) {
     console.log("This round is a draw!");
@@ -41,19 +41,25 @@ function playRound(humanChoice, computerChoice) {
 }
 
 function playGame() {
+  
   for (let i = 0; i < 5; i++) {
     playRound(getHumanChoice(), getComputerChoice());
   }
 
+  const finalScores = `FINAL SCORES:
+Your score: ${humanScore}. Computer's Score: ${computerScore}.`;
+
   if (humanScore === computerScore) {
-    console.log("It's a draw!");
+    console.log("Nobody wins! This game is a DRAW!");
     return;
   }
 
   if (humanScore > computerScore) {
     console.log("You win the game!");
+    console.log(finalScores)
   } else {
     console.log("You lose! Computer wins the game!");
+    console.log(finalScores)
   }
 }
 
