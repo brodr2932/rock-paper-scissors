@@ -41,9 +41,10 @@ function playRound(humanChoice, computerChoice) {
 }
 
 function playGame() {
-  for (let i = 0; i < 5; i++) {
-    playRound(getHumanChoice(), getComputerChoice());
-  }
+  // Play 5 rounds
+  // for (let i = 0; i < 5; i++) {
+  //   playRound(getHumanChoice(), getComputerChoice());
+  // }
 
   const finalScores = `FINAL SCORES:
 Your score: ${humanScore}. Computer's Score: ${computerScore}.`;
