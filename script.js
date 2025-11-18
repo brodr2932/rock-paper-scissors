@@ -45,14 +45,25 @@ function playRound(humanChoice, computerChoice) {
   }
 
   resultsDiv.innerHTML += `<br>Your score: ${humanScore}. Computer's Score: ${computerScore}.`;
+  checkForWinner();
+}
+
+function checkForWinner() {
+  if (humanScore === 5) {
+    resultsDiv.innerHTML += "<br>Game Over! You win!";
+    humanScore = 0;
+    computerScore = 0;
+    return;
+  }
+  if (computerScore === 5) {
+    resultsDiv.innerHTML += "<br>Game Over! Computer wins!";
+    humanScore = 0;
+    computerScore = 0;
+    return;
+  }
 }
 
 function playGame() {
-  // Play 5 rounds
-  // for (let i = 0; i < 5; i++) {
-  //   playRound(getHumanChoice(), getComputerChoice());
-  // }
-
   rockBtn.addEventListener('click', () => {
     playRound(rockBtn.value, getComputerChoice());
   })
@@ -66,8 +77,9 @@ function playGame() {
   })
 
 
-  const finalScores = `FINAL SCORES:
-Your score: ${humanScore}. Computer's Score: ${computerScore}.`;
+
+//   const finalScores = `FINAL SCORES:
+// Your score: ${humanScore}. Computer's Score: ${computerScore}.`;
 
   // if (humanScore === computerScore) {
   //   console.log("Nobody wins! This game is a DRAW!");
