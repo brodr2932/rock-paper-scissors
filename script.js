@@ -43,6 +43,8 @@ function playRound(humanChoice, computerChoice) {
     computerScore++;
     resultsDiv.innerHTML += "<br>Computer wins the round!";
   }
+
+  resultsDiv.innerHTML += `<br>Your score: ${humanScore}. Computer's Score: ${computerScore}.`;
 }
 
 function playGame() {
