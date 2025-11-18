@@ -1,3 +1,6 @@
+const rockBtn = document.querySelector("#rock-btn");
+const paperBtn = document.querySelector("#paper-btn");
+const scissorsBtn = document.querySelector("#scissors-btn");
 let humanScore = 0;
 let computerScore = 0;
 
@@ -45,6 +48,8 @@ function playGame() {
   // for (let i = 0; i < 5; i++) {
   //   playRound(getHumanChoice(), getComputerChoice());
   // }
+
+
 
   const finalScores = `FINAL SCORES:
 Your score: ${humanScore}. Computer's Score: ${computerScore}.`;
