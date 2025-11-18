@@ -49,6 +49,17 @@ function playGame() {
   //   playRound(getHumanChoice(), getComputerChoice());
   // }
 
+  rockBtn.addEventListener('click', () => {
+    playRound(rockBtn.value, getComputerChoice());
+  })
+
+  paperBtn.addEventListener('click', () => {
+    playRound(paperBtn.value, getComputerChoice());
+  })
+
+  scissorsBtn.addEventListener('click', () => {
+    playRound(scissorsBtn.value, getComputerChoice());
+  })
 
 
   const finalScores = `FINAL SCORES:
