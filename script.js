@@ -50,13 +50,13 @@ function playRound(humanChoice, computerChoice) {
 
 function checkForWinner() {
   if (humanScore === 5) {
-    resultsDiv.innerHTML += "<br><strong>Game Over! You win!</strong>";
+    resultsDiv.innerHTML += '<br><span class="winner-msg">Game Over! You win!</span>';
     humanScore = 0;
     computerScore = 0;
     return;
   }
   if (computerScore === 5) {
-    resultsDiv.innerHTML += "<br><strong>Game Over! Computer wins!</strong>";
+    resultsDiv.innerHTML += '<br><span class="winner-msg">Game Over! Computer wins!</span>';
     humanScore = 0;
     computerScore = 0;
     return;
@@ -78,8 +78,3 @@ function playGame() {
 }
 
 playGame();
-
-// TO-DO: Continue testing to see if the whole game works. I last added logic to determine 
-// the winner via the checkForWinner() function. Also made sure it resets the 
-// scores after a winner is declared. Might wanna add a PLAY AGAIN? button just for
-// fun.
