@@ -75,24 +75,11 @@ function playGame() {
   scissorsBtn.addEventListener('click', () => {
     playRound(scissorsBtn.value, getComputerChoice());
   })
-
-
-
-//   const finalScores = `FINAL SCORES:
-// Your score: ${humanScore}. Computer's Score: ${computerScore}.`;
-
-  // if (humanScore === computerScore) {
-  //   console.log("Nobody wins! This game is a DRAW!");
-  //   return;
-  // }
-
-  // if (humanScore > computerScore) {
-  //   console.log("You win the game!");
-  //   console.log(finalScores)
-  // } else {
-  //   console.log("You lose! Computer wins the game!");
-  //   console.log(finalScores)
-  // }
 }
 
 playGame();
+
+// TO-DO: Continue testing to see if the whole game works. I last added logic to determine 
+// the winner via the checkForWinner() function. Also made sure it resets the 
+// scores after a winner is declared. Might wanna add a PLAY AGAIN? button just for
+// fun.
