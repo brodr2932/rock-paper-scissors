@@ -50,13 +50,13 @@ function playRound(humanChoice, computerChoice) {
 
 function checkForWinner() {
   if (humanScore === 5) {
-    resultsDiv.innerHTML += "<br>Game Over! You win!";
+    resultsDiv.innerHTML += "<br><strong>Game Over! You win!</strong>";
     humanScore = 0;
     computerScore = 0;
     return;
   }
   if (computerScore === 5) {
-    resultsDiv.innerHTML += "<br>Game Over! Computer wins!";
+    resultsDiv.innerHTML += "<br><strong>Game Over! Computer wins!</strong>";
     humanScore = 0;
     computerScore = 0;
     return;
