@@ -1,6 +1,9 @@
 const rockBtn = document.querySelector("#rock-btn");
 const paperBtn = document.querySelector("#paper-btn");
 const scissorsBtn = document.querySelector("#scissors-btn");
+
+const resultsDiv = document.querySelector("#results");
+
 let humanScore = 0;
 let computerScore = 0;
 
@@ -65,18 +68,18 @@ function playGame() {
   const finalScores = `FINAL SCORES:
 Your score: ${humanScore}. Computer's Score: ${computerScore}.`;
 
-  if (humanScore === computerScore) {
-    console.log("Nobody wins! This game is a DRAW!");
-    return;
-  }
+  // if (humanScore === computerScore) {
+  //   console.log("Nobody wins! This game is a DRAW!");
+  //   return;
+  // }
 
-  if (humanScore > computerScore) {
-    console.log("You win the game!");
-    console.log(finalScores)
-  } else {
-    console.log("You lose! Computer wins the game!");
-    console.log(finalScores)
-  }
+  // if (humanScore > computerScore) {
+  //   console.log("You win the game!");
+  //   console.log(finalScores)
+  // } else {
+  //   console.log("You lose! Computer wins the game!");
+  //   console.log(finalScores)
+  // }
 }
 
 playGame();
