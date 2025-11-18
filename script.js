@@ -2,7 +2,7 @@ const rockBtn = document.querySelector("#rock-btn");
 const paperBtn = document.querySelector("#paper-btn");
 const scissorsBtn = document.querySelector("#scissors-btn");
 
-const resultsDiv = document.querySelector("#results");
+let resultsDiv = document.querySelector("#results");
 
 let humanScore = 0;
 let computerScore = 0;
@@ -21,15 +21,14 @@ function getComputerChoice() {
 
 function getHumanChoice() {
   const userInput = prompt('Rock, paper, or scissors?').toLowerCase();
-
   return userInput;
 }
 
 function playRound(humanChoice, computerChoice) {
-  console.log(`Your choice: ${humanChoice}. Computer's choice: ${computerChoice}`);
+  resultsDiv.textContent = `Your choice: ${humanChoice}. Computer's choice: ${computerChoice}.`;
 
   if (humanChoice === computerChoice) {
-    console.log("This round is a draw!");
+    resultsDiv.innerHTML += "<br>This round is a draw!";
     return;
   }
 
@@ -38,11 +37,11 @@ function playRound(humanChoice, computerChoice) {
     humanChoice === "paper" && computerChoice === "rock" ||
     humanChoice === "scissors" && computerChoice === "paper"
   ) {
-    console.log("You win the round!")
+    resultsDiv.innerHTML += "<br>You win the round!";
     humanScore++;
   } else {
     computerScore++;
-    console.log("Computer wins the round!");
+    resultsDiv.innerHTML += "<br>Computer wins the round!";
   }
 }
 
