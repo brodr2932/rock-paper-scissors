@@ -19,5 +19,5 @@ https://brodr2932.github.io/rock-paper-scissors/
 ## Technologies Used
 - HTML
 - JavaScript
-
+- CSS
 ---
